@@ -27,6 +27,17 @@ public class RubyController : MonoBehaviour
     float horizontal;
     float vertical;
 
+    // Fixed Robots TMP Integers
+    public TextMeshProUGUI fixedText;
+    private int scoreFixed = 0;
+
+    // Win text
+    public GameObject WinTextObject;
+
+    //Lose text
+    public GameObject LoseTextObject;
+    bool gameOver;
+
     Animator animator;
     Vector2 lookDirection = new Vector2(1, 0);
 
