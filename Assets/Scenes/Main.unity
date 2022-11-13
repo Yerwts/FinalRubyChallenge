@@ -347,7 +347,7 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
-  m_SpriteSortPoint: 0
+  m_SpriteSortPoint: 1
 --- !u!1 &262885457
 GameObject:
   m_ObjectHideFlags: 0
@@ -431,7 +431,7 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
-  m_SpriteSortPoint: 0
+  m_SpriteSortPoint: 1
 --- !u!1 &297263214
 GameObject:
   m_ObjectHideFlags: 0
@@ -32495,13 +32495,10 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'You Win
+  m_text: 'You Win. Press R to Restart
 
 
-    A Game By Kobe Newland
-
-
-    Press R to Restart'
+    A Game By Kobe Newland'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -33100,6 +33097,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2699434704370564896, guid: 3d1371a087f096f48b1dbe115aac9f69,
         type: 3}
+      propertyPath: m_Volume
+      value: 0.127
+      objectReference: {fileID: 0}
+    - target: {fileID: 2699434704370564896, guid: 3d1371a087f096f48b1dbe115aac9f69,
+        type: 3}
       propertyPath: m_audioClip
       value: 
       objectReference: {fileID: 8300000, guid: 266642ea6541f854e9573bf464cb5557, type: 3}
@@ -33188,6 +33190,11 @@ PrefabInstance:
       propertyPath: hitSound
       value: 
       objectReference: {fileID: 8300000, guid: 9b1bb1f450b7d444fa4a8019d13519a7, type: 3}
+    - target: {fileID: 3932313099251433755, guid: 3d1371a087f096f48b1dbe115aac9f69,
+        type: 3}
+      propertyPath: winSound
+      value: 
+      objectReference: {fileID: 8300000, guid: f987bfc0b774d3f4e82dc47e91f78584, type: 3}
     - target: {fileID: 3932313099251433755, guid: 3d1371a087f096f48b1dbe115aac9f69,
         type: 3}
       propertyPath: fixedText
