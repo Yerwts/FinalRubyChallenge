@@ -142,6 +142,16 @@ public class RubyController : MonoBehaviour
         {
             HealEffect.Play();
         }
+        if (currentHealth <= 0)
+        {
+            LoseTextObject.SetActive(true);
+
+            transform.position = new Vector3(-5f, 0f, -100f);
+            speed = 0;
+            Destroy(gameObject.GetComponent<SpriteRenderer>());
+
+            gameOver = true;
+        }
         currentHealth = Mathf.Clamp(currentHealth + amount, 0, maxHealth);
 
         UIHealthBar.instance.SetValue(currentHealth / (float)maxHealth);
