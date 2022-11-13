@@ -167,12 +167,6 @@ public class RubyController : MonoBehaviour
         {
             WinTextObject.SetActive(true);
 
-            audioSource.clip = backgroundSound;
-            audioSource.Stop();
-
-            audioSource.clip = winSound;
-            audioSource.Play();
-
             transform.position = new Vector3(-5f, 0f, -100f);
             speed = 0;
 
