@@ -53,6 +53,15 @@ public class RubyController : MonoBehaviour
         HealEffect.Stop();
         HarmEffect.Stop();
         audioSource = GetComponent<AudioSource>();
+
+        // Fixed Robot Text
+        fixedText.text = "Fixed Robots: " + scoreFixed.ToString() + "/6";
+
+        // Win Text
+        WinTextObject.SetActive(false);
+        LoseTextObject.SetActive(false);
+        gameOver = false;
+
     }
 
     // Update is called once per frame
