@@ -18,7 +18,7 @@ public class RubyController : MonoBehaviour
     public AudioClip loseSound;
 
     public AudioClip backgroundSound;
-    
+
     public int health { get { return currentHealth; } }
     int currentHealth;
 
@@ -68,6 +68,9 @@ public class RubyController : MonoBehaviour
         LoseTextObject.SetActive(false);
         gameOver = false;
 
+        //Background music
+        audioSource.clip = backgroundSound;
+        audioSource.Play();
     }
 
     // Update is called once per frame

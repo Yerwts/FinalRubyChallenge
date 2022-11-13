@@ -7808,7 +7808,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: f9c23a1345a2daf4795a95080dfbc88f, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 0.133
+  m_Volume: 0
   m_Pitch: 1
   Loop: 1
   Mute: 0
@@ -33218,6 +33218,11 @@ PrefabInstance:
       propertyPath: LoseTextObject
       value: 
       objectReference: {fileID: 585711310}
+    - target: {fileID: 3932313099251433755, guid: 3d1371a087f096f48b1dbe115aac9f69,
+        type: 3}
+      propertyPath: backgroundSound
+      value: 
+      objectReference: {fileID: 8300000, guid: f9c23a1345a2daf4795a95080dfbc88f, type: 3}
     - target: {fileID: 3932313099251433755, guid: 3d1371a087f096f48b1dbe115aac9f69,
         type: 3}
       propertyPath: projectilePrefab
