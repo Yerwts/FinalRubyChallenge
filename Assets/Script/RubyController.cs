@@ -181,7 +181,7 @@ public class RubyController : MonoBehaviour
         Debug.Log("Fixed Robots: " + scoreFixed);
 
         // Win Text Appears
-        if (scoreFixed >= 6)
+        if (scoreFixed >= 4)
         {
             WinTextObject.SetActive(true);
 
@@ -193,12 +193,4 @@ public class RubyController : MonoBehaviour
             gameOver = true;
         }
     }
-}
-public void FixedRobots(int amount)
-{
-    scoreFixed += amount;
-    fixedText.text = "Fixed Robots: " + scoreFixed.ToString() + "/4";
-
-    Debug.Log("Fixed Robots: " + scoreFixed);
-}
 }
