@@ -154,4 +154,30 @@ public class RubyController : MonoBehaviour
     {
         audioSource.PlayOneShot(clip);
     }
+    public void FixedRobots(int amount)
+    {
+        scoreFixed += amount;
+        fixedText.text = "Fixed Robots: " + scoreFixed.ToString() + "/6";
+
+        Debug.Log("Fixed Robots: " + scoreFixed);
+
+        // Win Text Appears
+        if (scoreFixed >= 6)
+        {
+            WinTextObject.SetActive(true);
+
+            audioSource.clip = backgroundSound;
+            audioSource.Stop();
+
+            audioSource.clip = winSound;
+            audioSource.Play();
+
+            transform.position = new Vector3(-5f, 0f, -100f);
+            speed = 0;
+
+            Destroy(gameObject.GetComponent<SpriteRenderer>());
+
+            gameOver = true;
+        }
+    }
 }
