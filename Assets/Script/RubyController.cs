@@ -106,7 +106,7 @@ public class RubyController : MonoBehaviour
 
             isInvincible = true;
             invincibleTimer = timeInvincible;
-
+            HarmEffect.Play();
             PlaySound(hitSound);
         }
         if (amount > 0)
