@@ -17,6 +17,7 @@ public class RubyController : MonoBehaviour
     int currentHealth;
 
     public ParticleSystem HealEffect;
+    public ParticleSystem HarmEffect;
 
     public float timeInvincible = 2.0f;
     bool isInvincible;
@@ -39,6 +40,7 @@ public class RubyController : MonoBehaviour
 
         currentHealth = maxHealth;
         HealEffect.Stop();
+        HarmEffect.Stop();
         audioSource = GetComponent<AudioSource>();
     }
 
