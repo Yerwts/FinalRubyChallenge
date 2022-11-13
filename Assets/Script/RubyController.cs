@@ -115,7 +115,13 @@ public class RubyController : MonoBehaviour
         {
             Application.Quit();
         }
-
+        if (Input.GetKeyDown(KeyCode.R))
+        {
+            if (gameOver == true)
+            {
+                SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+            }
+        }
 
     }
 
