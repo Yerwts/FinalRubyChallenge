@@ -166,7 +166,7 @@ public class RubyController : MonoBehaviour
     public void FixedRobots(int amount)
     {
         scoreFixed += amount;
-        fixedText.text = "Fixed Robots: " + scoreFixed.ToString() + "/6";
+        fixedText.text = "Fixed Robots: " + scoreFixed.ToString() + "/4";
 
         Debug.Log("Fixed Robots: " + scoreFixed);
 
