@@ -105,11 +105,16 @@ public class RubyController : MonoBehaviour
                 {
                     character.DisplayDialog();
                 }
-                
+
             }
-            
+
         }
-        
+        // Close Game
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            Application.Quit();
+        }
+
     }
 
     void FixedUpdate()
