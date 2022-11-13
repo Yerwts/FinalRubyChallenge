@@ -56,7 +56,7 @@ public class RubyController : MonoBehaviour
         audioSource = GetComponent<AudioSource>();
 
         // Fixed Robot Text
-        fixedText.text = "Fixed Robots: " + scoreFixed.ToString() + "/6";
+        fixedText.text = "Fixed Robots: " + scoreFixed.ToString() + "/4";
 
         // Win Text
         WinTextObject.SetActive(false);
