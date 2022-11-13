@@ -7,7 +7,7 @@ public class RubyController : MonoBehaviour
 {
     public float speed = 3.0f;
 
-    public int maxHealth = 5;
+    public int maxHealth = 4;
 
     public GameObject projectilePrefab;
 
