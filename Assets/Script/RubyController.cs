@@ -105,8 +105,11 @@ public class RubyController : MonoBehaviour
                 {
                     character.DisplayDialog();
                 }
+                
             }
+            
         }
+        
     }
 
     void FixedUpdate()
