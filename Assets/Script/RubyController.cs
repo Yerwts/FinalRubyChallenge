@@ -160,7 +160,7 @@ public class RubyController : MonoBehaviour
         if (currentHealth <= 0)
         {
             LoseTextObject.SetActive(true);
-            audioSource.clip = LoseSound;
+            audioSource.clip = loseSound;
             audioSource.Play();
             transform.position = new Vector3(-5f, 0f, -100f);
             speed = 0;
