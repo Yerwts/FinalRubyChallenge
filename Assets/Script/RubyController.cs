@@ -152,6 +152,8 @@ public class RubyController : MonoBehaviour
             invincibleTimer = timeInvincible;
             HarmEffect.Play();
             PlaySound(hitSound);
+            animator.SetTrigger("Hit");
+
         }
         if (amount > 0)
         {
