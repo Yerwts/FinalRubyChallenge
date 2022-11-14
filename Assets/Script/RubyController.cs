@@ -9,8 +9,13 @@ public class RubyController : MonoBehaviour
     public float speed = 3.0f;
 
     public int maxHealth = 5;
+    //Level
+    public static int level = 1;
 
+    // Projectile
     public GameObject projectilePrefab;
+    public TextMeshProUGUI ammoText;
+    private int cogCount = 4;
 
     public AudioClip throwSound;
     public AudioClip hitSound;
