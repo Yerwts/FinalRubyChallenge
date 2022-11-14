@@ -165,6 +165,7 @@ public class RubyController : MonoBehaviour
             LoseTextObject.SetActive(true);
             audioSource.clip = loseSound;
             audioSource.Play();
+            audioSource.loop = false;
             transform.position = new Vector3(-5f, 0f, -100f);
             speed = 0;
             Destroy(gameObject.GetComponent<SpriteRenderer>());
@@ -205,6 +206,7 @@ public class RubyController : MonoBehaviour
             WinTextObject.SetActive(true);
             audioSource.clip = backgroundSound;
             audioSource.Stop();
+            audioSource.loop = false;
 
             audioSource.clip = winSound;
             audioSource.Play();
