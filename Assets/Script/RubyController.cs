@@ -9,7 +9,7 @@ public class RubyController : MonoBehaviour
     public float speed = 3.0f;
 
     public int maxHealth = 5;
-    
+
     public static int level = 1;
 
     public GameObject projectilePrefab;
@@ -66,6 +66,9 @@ public class RubyController : MonoBehaviour
 
         // Fixed Robot Text
         fixedText.text = "Fixed Robots: " + scoreFixed.ToString() + "/4";
+        
+        // Ammo
+        ammoText.text = "Cogs: " + cogCount;
 
         // Win Text
         WinTextObject.SetActive(false);
