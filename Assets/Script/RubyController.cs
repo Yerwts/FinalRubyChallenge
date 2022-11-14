@@ -198,6 +198,8 @@ public class RubyController : MonoBehaviour
         animator.SetTrigger("Launch");
 
         PlaySound(throwSound);
+        cogCount -= 1;
+        SetCogText();
     }
 
     public void PlaySound(AudioClip clip)
