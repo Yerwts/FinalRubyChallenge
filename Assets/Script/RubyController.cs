@@ -66,7 +66,6 @@ public class RubyController : MonoBehaviour
 
         // Fixed Robot Text
         fixedText.text = "Fixed Robots: " + scoreFixed.ToString() + "/4";
-        
         // Ammo
         ammoText.text = "Cogs: " + cogCount;
 
@@ -130,14 +129,20 @@ public class RubyController : MonoBehaviour
         {
             Application.Quit();
         }
-        if (Input.GetKeyDown(KeyCode.R))
-        {
-            if (gameOver == true)
-            {
-                SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
-            }
-        }
+       if (Input.GetKey(KeyCode.R))
 
+        {
+            if (gameOver == true && level == 2)
+            {
+                SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex); // this loads the currently active scene
+            }
+
+            if (gameOver == true && level == 1)
+            {
+                SceneManager.LoadScene("Main");
+            }
+
+        }
     }
 
     void FixedUpdate()
