@@ -11,7 +11,7 @@ public class RubyController : MonoBehaviour
     public int maxHealth = 5;
 
     public GameObject projectilePrefab;
-
+    
     public AudioClip throwSound;
     public AudioClip hitSound;
     public AudioClip winSound;
@@ -206,8 +206,8 @@ public class RubyController : MonoBehaviour
             WinTextObject.SetActive(true);
             audioSource.clip = backgroundSound;
             audioSource.Stop();
-            audioSource.loop = true;
-            
+            audioSource.loop = false;
+
             audioSource.clip = winSound;
             audioSource.Play();
 
