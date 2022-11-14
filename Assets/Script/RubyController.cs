@@ -71,6 +71,7 @@ public class RubyController : MonoBehaviour
         //Background music
         audioSource.clip = backgroundSound;
         audioSource.Play();
+        audioSource.loop = true;
     }
 
     // Update is called once per frame
