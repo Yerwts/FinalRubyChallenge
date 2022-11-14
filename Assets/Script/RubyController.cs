@@ -68,7 +68,7 @@ public class RubyController : MonoBehaviour
 
         // Fixed Robot Text
         fixedText.text = "Fixed Robots: " + scoreFixed.ToString() + "/4";
-        
+
         // Ammo at start
         rigidbody2d = GetComponent<Rigidbody2D>();
         currentAmmo = 0;
@@ -114,7 +114,14 @@ public class RubyController : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.C))
         {
             Launch();
+
+            if (currentAmmo > 0)
+            {
+                ChangeAmmo(-1);
+                AmmoText();
+            }
         }
+
 
         if (Input.GetKeyDown(KeyCode.X))
         {
