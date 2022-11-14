@@ -73,7 +73,7 @@ public class RubyController : MonoBehaviour
 
         // Ammo at start
         rigidbody2d = GetComponent<Rigidbody2D>();
-        currentAmmo = 0;
+        currentAmmo = 4;
         AmmoText();
 
         // Win Text
