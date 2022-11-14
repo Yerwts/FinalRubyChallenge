@@ -44,6 +44,7 @@ public class RubyController : MonoBehaviour
 
     // Win text
     public GameObject WinTextObject;
+    public GameObject contTextObject;
 
     //Lose text
     public GameObject LoseTextObject;
