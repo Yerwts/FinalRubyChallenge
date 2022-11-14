@@ -73,6 +73,7 @@ public class RubyController : MonoBehaviour
         // Win Text
         WinTextObject.SetActive(false);
         LoseTextObject.SetActive(false);
+        
         gameOver = false;
 
         //Background music
