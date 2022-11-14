@@ -189,46 +189,62 @@ public class RubyController : MonoBehaviour
         UIHealthBar.instance.SetValue(currentHealth / (float)maxHealth);
     }
 
+    // Projectile
     void Launch()
     {
-        GameObject projectileObject = Instantiate(projectilePrefab, rigidbody2d.position + Vector2.up * 0.5f, Quaternion.identity);
+        if (cogCount > 0)
+        {
+            GameObject projectileObject = Instantiate(projectilePrefab, rigidbody2d.position + Vector2.up * 0.5f, Quaternion.identity);
 
-        Projectile projectile = projectileObject.GetComponent<Projectile>();
-        projectile.Launch(lookDirection, 300);
+            Projectile projectile = projectileObject.GetComponent<Projectile>();
+            projectile.Launch(lookDirection, 300);
 
-        animator.SetTrigger("Launch");
+            animator.SetTrigger("Launch");
 
-        PlaySound(throwSound);
+            audioSource.PlayOneShot(throwSound);
+            cogCount -= 1;
+            SetCogText();
+        }
     }
 
-    public void PlaySound(AudioClip clip)
+    public void FixedText(int amount)
     {
-        audioSource.PlayOneShot(clip);
-    }
-    public void FixedRobots(int amount)
-    {
-        scoreFixed += amount;
-        fixedText.text = "Fixed Robots: " + scoreFixed.ToString() + "/4";
+        fixCount += amount;
+        fixedText.text = "Fixed Robots: " + fixCount.ToString() + "/4";
 
-        Debug.Log("Fixed Robots: " + scoreFixed);
+        if (fixCount == 4 && level == 1)
+        {
+            contTextObject.SetActive(true);
+            level = 2;
+        }
 
-        // Win Text Appears
-        if (scoreFixed >= 4)
+        else if (level == 2 && fixCount == 4)
         {
             WinTextObject.SetActive(true);
-            audioSource.clip = backgroundSound;
-            audioSource.Stop();
-            audioSource.loop = false;
-
-            audioSource.clip = winSound;
-            audioSource.Play();
-
-            transform.position = new Vector3(-5f, 0f, -100f);
             speed = 0;
 
-            Destroy(gameObject.GetComponent<SpriteRenderer>());
+            audioSource.clip = bgMuse;
+            audioSource.Stop();
+            audioSource.clip = WinClip;
+            audioSource.Play();
 
             gameOver = true;
+            level = 1;
+        }
+    }
+
+    void SetCogText()
+    {
+        ammoText.text = "Cogs: " + cogCount.ToString();
+    }
+
+    private void OnTriggerEnter2D(Collider2D other)
+    {
+        if (other.tag == "Ammo")
+        {
+            cogCount += 4;
+            SetCogText();
+            Destroy(other.gameObject);
         }
     }
 }
