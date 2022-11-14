@@ -14,8 +14,8 @@ public class RubyController : MonoBehaviour
 
     // Projectile
     public GameObject projectilePrefab;
-    public TextMeshProUGUI ammoText;
-    private int cogCount = 4;
+    public int ammo { get { return currentAmmo; } }
+    public int currentAmmo;
 
     public AudioClip throwSound;
     public AudioClip hitSound;
