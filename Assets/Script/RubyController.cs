@@ -10,11 +10,7 @@ public class RubyController : MonoBehaviour
 
     public int maxHealth = 5;
 
-    public static int level = 1;
-
     public GameObject projectilePrefab;
-    public TextMeshProUGUI ammoText;
-    private int cogCount = 4;
 
     public AudioClip throwSound;
     public AudioClip hitSound;
@@ -66,8 +62,6 @@ public class RubyController : MonoBehaviour
 
         // Fixed Robot Text
         fixedText.text = "Fixed Robots: " + scoreFixed.ToString() + "/4";
-        // Ammo
-        ammoText.text = "Cogs: " + cogCount;
 
         // Win Text
         WinTextObject.SetActive(false);
@@ -129,20 +123,14 @@ public class RubyController : MonoBehaviour
         {
             Application.Quit();
         }
-       if (Input.GetKey(KeyCode.R))
-
+        if (Input.GetKeyDown(KeyCode.R))
         {
-            if (gameOver == true && level == 2)
+            if (gameOver == true)
             {
-                SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex); // this loads the currently active scene
+                SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
             }
-
-            if (gameOver == true && level == 1)
-            {
-                SceneManager.LoadScene("Main");
-            }
-
         }
+
     }
 
     void FixedUpdate()
@@ -189,62 +177,46 @@ public class RubyController : MonoBehaviour
         UIHealthBar.instance.SetValue(currentHealth / (float)maxHealth);
     }
 
-    // Projectile
     void Launch()
     {
-        if (cogCount > 0)
-        {
-            GameObject projectileObject = Instantiate(projectilePrefab, rigidbody2d.position + Vector2.up * 0.5f, Quaternion.identity);
+        GameObject projectileObject = Instantiate(projectilePrefab, rigidbody2d.position + Vector2.up * 0.5f, Quaternion.identity);
 
-            Projectile projectile = projectileObject.GetComponent<Projectile>();
-            projectile.Launch(lookDirection, 300);
+        Projectile projectile = projectileObject.GetComponent<Projectile>();
+        projectile.Launch(lookDirection, 300);
 
-            animator.SetTrigger("Launch");
+        animator.SetTrigger("Launch");
 
-            audioSource.PlayOneShot(throwSound);
-            cogCount -= 1;
-            SetCogText();
-        }
+        PlaySound(throwSound);
     }
 
-    public void FixedText(int amount)
+    public void PlaySound(AudioClip clip)
     {
-        fixCount += amount;
-        fixedText.text = "Fixed Robots: " + fixCount.ToString() + "/4";
+        audioSource.PlayOneShot(clip);
+    }
+    public void FixedRobots(int amount)
+    {
+        scoreFixed += amount;
+        fixedText.text = "Fixed Robots: " + scoreFixed.ToString() + "/4";
 
-        if (fixCount == 4 && level == 1)
-        {
-            contTextObject.SetActive(true);
-            level = 2;
-        }
+        Debug.Log("Fixed Robots: " + scoreFixed);
 
-        else if (level == 2 && fixCount == 4)
+        // Win Text Appears
+        if (scoreFixed >= 4)
         {
             WinTextObject.SetActive(true);
-            speed = 0;
-
-            audioSource.clip = bgMuse;
+            audioSource.clip = backgroundSound;
             audioSource.Stop();
-            audioSource.clip = WinClip;
+            audioSource.loop = true;
+            
+            audioSource.clip = winSound;
             audioSource.Play();
 
+            transform.position = new Vector3(-5f, 0f, -100f);
+            speed = 0;
+
+            Destroy(gameObject.GetComponent<SpriteRenderer>());
+
             gameOver = true;
-            level = 1;
-        }
-    }
-
-    void SetCogText()
-    {
-        ammoText.text = "Cogs: " + cogCount.ToString();
-    }
-
-    private void OnTriggerEnter2D(Collider2D other)
-    {
-        if (other.tag == "Ammo")
-        {
-            cogCount += 4;
-            SetCogText();
-            Destroy(other.gameObject);
         }
     }
 }
