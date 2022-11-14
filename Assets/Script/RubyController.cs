@@ -200,17 +200,33 @@ public class RubyController : MonoBehaviour
         UIHealthBar.instance.SetValue(currentHealth / (float)maxHealth);
     }
 
+    // Ammo Function
+    public void ChangeAmmo(int amount)
+    {
+        // Ammo math code
+        currentAmmo = Mathf.Abs(currentAmmo + amount);
+        Debug.Log("Ammo: " + currentAmmo);
+    }
+
+    public void AmmoText()
+    {
+        ammoText.text = "Ammo: " + currentAmmo.ToString();
+    }
+
+    // Projectile Code
     void Launch()
     {
-        GameObject projectileObject = Instantiate(projectilePrefab, rigidbody2d.position + Vector2.up * 0.5f, Quaternion.identity);
+        if (currentAmmo > 0) // If player has ammo, they can launch cogs
+        {
+            GameObject projectileObject = Instantiate(projectilePrefab, rigidbody2d.position + Vector2.up * 0.5f, Quaternion.identity);
 
-        Projectile projectile = projectileObject.GetComponent<Projectile>();
-        projectile.Launch(lookDirection, 300);
+            Projectile projectile = projectileObject.GetComponent<Projectile>();
+            projectile.Launch(lookDirection, 300);
 
-        animator.SetTrigger("Launch");
+            animator.SetTrigger("Launch");
 
-        PlaySound(throwSound);
-
+            PlaySound(throwSound);
+        }
     }
 
     public void PlaySound(AudioClip clip)
