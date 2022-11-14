@@ -214,7 +214,13 @@ public class RubyController : MonoBehaviour
         Debug.Log("Fixed Robots: " + scoreFixed);
 
         // Win Text Appears
-        if (scoreFixed >= 4)
+        if (scoreFixed == 4 && level == 1)
+        {
+            contTextObject.SetActive(true);
+            level = 2;
+        }
+
+        else if (level == 2 && scoreFixed == 4)
         {
             WinTextObject.SetActive(true);
             audioSource.clip = backgroundSound;
