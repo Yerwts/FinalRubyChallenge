@@ -68,8 +68,11 @@ public class RubyController : MonoBehaviour
 
         // Fixed Robot Text
         fixedText.text = "Fixed Robots: " + scoreFixed.ToString() + "/4";
-        // Ammo
-        ammoText.text = "Cogs: " + cogCount;
+        
+        // Ammo at start
+        rigidbody2d = GetComponent<Rigidbody2D>();
+        currentAmmo = 0;
+        AmmoText();
 
         // Win Text
         WinTextObject.SetActive(false);
