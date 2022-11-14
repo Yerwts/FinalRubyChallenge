@@ -33343,7 +33343,7 @@ PrefabInstance:
     - target: {fileID: 2699434704370564896, guid: 3d1371a087f096f48b1dbe115aac9f69,
         type: 3}
       propertyPath: Loop
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2699434704370564896, guid: 3d1371a087f096f48b1dbe115aac9f69,
         type: 3}
@@ -33353,13 +33353,13 @@ PrefabInstance:
     - target: {fileID: 2699434704370564896, guid: 3d1371a087f096f48b1dbe115aac9f69,
         type: 3}
       propertyPath: m_Volume
-      value: 0.127
+      value: 0.262
       objectReference: {fileID: 0}
     - target: {fileID: 2699434704370564896, guid: 3d1371a087f096f48b1dbe115aac9f69,
         type: 3}
       propertyPath: m_audioClip
       value: 
-      objectReference: {fileID: 8300000, guid: f9c23a1345a2daf4795a95080dfbc88f, type: 3}
+      objectReference: {fileID: 0}
     - target: {fileID: 3932313099251433732, guid: 3d1371a087f096f48b1dbe115aac9f69,
         type: 3}
       propertyPath: m_RootOrder
