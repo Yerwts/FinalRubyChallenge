@@ -16,6 +16,8 @@ public class RubyController : MonoBehaviour
     public GameObject projectilePrefab;
     public int ammo { get { return currentAmmo; } }
     public int currentAmmo;
+    public TextMeshProUGUI ammoText;
+
 
     public AudioClip throwSound;
     public AudioClip hitSound;
@@ -77,7 +79,7 @@ public class RubyController : MonoBehaviour
         // Win Text
         WinTextObject.SetActive(false);
         LoseTextObject.SetActive(false);
-        
+
         gameOver = false;
 
         //Background music
