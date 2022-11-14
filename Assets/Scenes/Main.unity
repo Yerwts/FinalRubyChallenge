@@ -33342,6 +33342,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2699434704370564896, guid: 3d1371a087f096f48b1dbe115aac9f69,
         type: 3}
+      propertyPath: Loop
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2699434704370564896, guid: 3d1371a087f096f48b1dbe115aac9f69,
+        type: 3}
       propertyPath: Pan2D
       value: -1
       objectReference: {fileID: 0}
@@ -33354,7 +33359,7 @@ PrefabInstance:
         type: 3}
       propertyPath: m_audioClip
       value: 
-      objectReference: {fileID: 8300000, guid: 266642ea6541f854e9573bf464cb5557, type: 3}
+      objectReference: {fileID: 8300000, guid: f9c23a1345a2daf4795a95080dfbc88f, type: 3}
     - target: {fileID: 3932313099251433732, guid: 3d1371a087f096f48b1dbe115aac9f69,
         type: 3}
       propertyPath: m_RootOrder

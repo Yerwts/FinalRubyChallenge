@@ -207,7 +207,7 @@ public class RubyController : MonoBehaviour
 
             audioSource.clip = winSound;
             audioSource.Play();
-            audioSource.Stop();
+
             transform.position = new Vector3(-5f, 0f, -100f);
             speed = 0;
 
