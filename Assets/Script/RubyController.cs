@@ -266,19 +266,4 @@ public class RubyController : MonoBehaviour
         }
     }
 
-    void SetCogText()
-    {
-        ammoText.text = "Cogs: " + cogCount.ToString();
-    }
-
-    private void OnTriggerEnter2D(Collider2D other)
-    {
-        if (other.tag == "Ammo")
-        {
-            cogCount += 4;
-            SetCogText();
-            Destroy(other.gameObject);
-        }
-    }
-
 }
