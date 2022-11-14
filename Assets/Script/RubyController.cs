@@ -11,7 +11,7 @@ public class RubyController : MonoBehaviour
     public int maxHealth = 5;
 
     public GameObject projectilePrefab;
-    
+
     public AudioClip throwSound;
     public AudioClip hitSound;
     public AudioClip winSound;
