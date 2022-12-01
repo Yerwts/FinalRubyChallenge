@@ -56,7 +56,7 @@ public class RubyController : MonoBehaviour
     Vector2 lookDirection = new Vector2(1, 0);
 
     AudioSource audioSource;
-    
+
     bool isBoosting;
     // Start is called before the first frame update
     void Start()
@@ -236,6 +236,7 @@ public class RubyController : MonoBehaviour
     {
         audioSource.PlayOneShot(clip);
     }
+    
     public void FixedRobots(int amount)
     {
         scoreFixed += amount;
@@ -267,6 +268,7 @@ public class RubyController : MonoBehaviour
 
             gameOver = true;
         }
+        
     }
 
 }
