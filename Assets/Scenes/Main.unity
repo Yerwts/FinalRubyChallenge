@@ -38979,8 +38979,8 @@ GameObject:
   - component: {fileID: 2046843551}
   - component: {fileID: 2046843550}
   - component: {fileID: 2046843549}
-  - component: {fileID: 2046843548}
   - component: {fileID: 2046843547}
+  - component: {fileID: 2046843552}
   m_Layer: 11
   m_Name: Batty
   m_TagString: Untagged
@@ -39008,20 +39008,6 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
---- !u!114 &2046843548
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2046843546}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 310c61d53870a5e4aa74035676d65570, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  displayTime: 4
-  dialogBox: {fileID: 1377110402}
 --- !u!61 &2046843549
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -39116,6 +39102,20 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 28
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2046843552
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2046843546}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b80ec1144d40e64409865c4fcf7ee856, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  displayTime: 4
+  dialogBox: {fileID: 1377110402}
 --- !u!4 &2066570701 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4297433341089027849, guid: 34361b14f6a44574698cffac61e0300e,
