@@ -17,7 +17,7 @@ public class CollectibleChocolate: MonoBehaviour
                 controller.ChangeHealth(1);
                 Destroy(gameObject);
 
-                controller.PlaySound(collectedClip);
+                controller.PlaySound(ChocoClip);
             }
         }
 
