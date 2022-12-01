@@ -143,7 +143,7 @@ public class RubyController : MonoBehaviour
                 {
                     if (scoreFixed >= 4)
                     {
-                        SceneManager.LoadScene("Level 2");
+                        SceneManager.LoadScene("Second Level");
                         level = 2;
                     }
 
