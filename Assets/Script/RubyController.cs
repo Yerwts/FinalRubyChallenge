@@ -113,6 +113,11 @@ public class RubyController : MonoBehaviour
             if (invincibleTimer < 0)
                 isInvincible = false;
         }
+        if (isBoosting == true)
+        {
+          
+            speed = speed + 1;
+        }
 
         if (Input.GetKeyDown(KeyCode.C))
         {
