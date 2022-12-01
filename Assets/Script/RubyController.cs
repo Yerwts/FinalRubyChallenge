@@ -115,7 +115,7 @@ public class RubyController : MonoBehaviour
         }
         if (isBoosting == true)
         {
-          
+
             speed = speed + 1;
         }
 
@@ -241,7 +241,7 @@ public class RubyController : MonoBehaviour
     {
         audioSource.PlayOneShot(clip);
     }
-    
+
     public void FixedRobots(int amount)
     {
         scoreFixed += amount;
@@ -273,9 +273,9 @@ public class RubyController : MonoBehaviour
 
             gameOver = true;
         }
-        
+
     }
-public void SpeedBoost(int amount)
+    public void SpeedBoost(int amount)
     {
         if (amount > 0)
         {
