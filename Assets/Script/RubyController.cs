@@ -270,5 +270,11 @@ public class RubyController : MonoBehaviour
         }
         
     }
-
+public void SpeedBoost(int amount)
+    {
+        if (amount > 0)
+        {
+            isBoosting = true;
+        }
+    }
 }
