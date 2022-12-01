@@ -199,7 +199,7 @@ public class RubyController : MonoBehaviour
         {
             HealEffect.Play();
         }
-        if (currentHealth <= 0)
+        if (currentHealth <= 1)
         {
             LoseTextObject.SetActive(true);
             audioSource.clip = loseSound;
