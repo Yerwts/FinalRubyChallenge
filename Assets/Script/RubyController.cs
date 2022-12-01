@@ -31,6 +31,7 @@ public class RubyController : MonoBehaviour
 
     public ParticleSystem HealEffect;
     public ParticleSystem HarmEffect;
+    public ParticleSystem SpeedEffect;
 
     public float timeInvincible = 2.0f;
     bool isInvincible;
@@ -66,6 +67,7 @@ public class RubyController : MonoBehaviour
 
         currentHealth = maxHealth;
         HealEffect.Stop();
+        HarmEffect.Stop();
         HarmEffect.Stop();
         audioSource = GetComponent<AudioSource>();
 
@@ -116,7 +118,7 @@ public class RubyController : MonoBehaviour
         if (isBoosting == true)
         {
 
-            speed = speed + 0.01f;
+            speed = speed + 0.001f;
         }
 
         if (Input.GetKeyDown(KeyCode.C))
