@@ -141,21 +141,18 @@ public class RubyController : MonoBehaviour
                 NonPlayerCharacter character = hit.collider.GetComponent<NonPlayerCharacter>();
                 if (character != null)
                 {
-                    character.
-                    DisplayDialog();
-                }
-                if (level == 2)
-                {
-                    SceneManager.LoadScene("Second Level");
-                }
-                NonPlayerCharacter2 character2 = hit.collider.GetComponent<NonPlayerCharacter2>();
-                if (character2 != null)
-                {
-                    character2.DisplayDialog();
-                }
+                    if (scoreFixed >= 4)
+                    {
+                        SceneManager.LoadScene("Level 2");
+                        level = 2;
+                    }
 
+                    else
+                    {
+                        character.DisplayDialog();
+                    }
+                }
             }
-
         }
         // Close Game
         if (Input.GetKeyDown(KeyCode.Escape))
