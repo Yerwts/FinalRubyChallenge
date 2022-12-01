@@ -12,10 +12,10 @@ public class Chocolate : MonoBehaviour
 
         if (controller != null)
         {
-            controller.ChangeSpeed(1);
-            Destroy(gameObject);
+                controller.ChangeHealth(1);
+                Destroy(gameObject);
 
-            controller.PlaySound(ChocoClip);
+                controller.PlaySound(ChocoClip);
         }
 
     }
