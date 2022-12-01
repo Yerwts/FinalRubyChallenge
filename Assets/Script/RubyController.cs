@@ -116,7 +116,7 @@ public class RubyController : MonoBehaviour
         if (isBoosting == true)
         {
 
-            speed = speed + 0.4f;
+            speed = speed + 0.01f;
         }
 
         if (Input.GetKeyDown(KeyCode.C))
