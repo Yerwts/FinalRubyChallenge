@@ -147,6 +147,11 @@ public class RubyController : MonoBehaviour
                 {
                     character.DisplayDialog();
                 }
+                NonPlayerCharacter2 character = hit.collider.GetComponent<NonPlayerCharacter2>();
+                if (character != null)
+                {
+                    character.DisplayDialog();
+                }
 
             }
 
