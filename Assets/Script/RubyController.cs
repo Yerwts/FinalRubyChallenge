@@ -153,6 +153,11 @@ public class RubyController : MonoBehaviour
                     }
                 }
             }
+            NonPlayerCharacter2 character2 = hit.collider.GetComponent<NonPlayerCharacter2>();
+            if (character2 != null)
+            {
+                character2.DisplayDialog();
+            }
         }
         // Close Game
         if (Input.GetKeyDown(KeyCode.Escape))
