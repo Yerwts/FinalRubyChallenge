@@ -138,7 +138,7 @@ public class RubyController : MonoBehaviour
             RaycastHit2D hit = Physics2D.Raycast(rigidbody2d.position + Vector2.up * 0.2f, lookDirection, 1.5f, LayerMask.GetMask("NPC"));
             if (hit.collider != null)
             {
-                if (level == 2)
+                if (level == 2 )
                 {
                     SceneManager.LoadScene("Second Level");
                 }
