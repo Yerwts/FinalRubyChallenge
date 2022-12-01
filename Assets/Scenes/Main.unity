@@ -39933,6 +39933,11 @@ PrefabInstance:
       objectReference: {fileID: 8300000, guid: b2edfd40873655249ba0e01a5cf705be, type: 3}
     - target: {fileID: 3932313099251433755, guid: 3d1371a087f096f48b1dbe115aac9f69,
         type: 3}
+      propertyPath: SpeedEffect
+      value: 
+      objectReference: {fileID: 1740519436}
+    - target: {fileID: 3932313099251433755, guid: 3d1371a087f096f48b1dbe115aac9f69,
+        type: 3}
       propertyPath: WinTextObject
       value: 
       objectReference: {fileID: 2112654234}
