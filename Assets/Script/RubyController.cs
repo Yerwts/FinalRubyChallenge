@@ -68,7 +68,7 @@ public class RubyController : MonoBehaviour
         currentHealth = maxHealth;
         HealEffect.Stop();
         HarmEffect.Stop();
-        HarmEffect.Stop();
+        SpeedEffect.Stop();
         audioSource = GetComponent<AudioSource>();
 
         // Fixed Robot Text
@@ -281,6 +281,7 @@ public class RubyController : MonoBehaviour
     {
         if (amount > 0)
         {
+            SpeedEffect.Play();
             isBoosting = true;
         }
     }
