@@ -312,7 +312,7 @@ public class RubyController : MonoBehaviour
     {
         if (amount > 0)
         {
-            isBoosting = true;
+            bool cakeYes = true;
         }
     }
 }
