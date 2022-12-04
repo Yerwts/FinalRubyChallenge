@@ -12,7 +12,7 @@ public class Cake : MonoBehaviour
 
         if (controller != null)
         {
-
+            controller.Cakeshield(1);
 
             Destroy(gameObject);
 
