@@ -308,6 +308,7 @@ public class RubyController : MonoBehaviour
         {
             SpeedEffect.Play();
             isBoosting = true;
+            isBoosting = false;
         }
     }
     public void Cakeshield(int amount)
