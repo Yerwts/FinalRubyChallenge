@@ -38,7 +38,7 @@ public class RubyController : MonoBehaviour
 
     public float timeInvincible = 2.0f;
     public float timeInvincible2 = 15.0f;
-    public float timeBoosting = 1.0f;
+    public float timeBoosting = 1;
     bool isInvincible;
     float invincibleTimer;
     float isBoostingTimer;
