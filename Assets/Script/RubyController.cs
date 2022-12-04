@@ -312,7 +312,6 @@ public class RubyController : MonoBehaviour
     {
         if (amount > 0)
         {
-            SpeedEffect.Play();
             isBoosting = true;
         }
     }
