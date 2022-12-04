@@ -32,6 +32,7 @@ public class RubyController : MonoBehaviour
     public ParticleSystem HealEffect;
     public ParticleSystem HarmEffect;
     public ParticleSystem SpeedEffect;
+    public ParticleSystem ShieldEffect;
 
     public float timeInvincible = 2.0f;
     bool isInvincible;
@@ -69,6 +70,7 @@ public class RubyController : MonoBehaviour
         HealEffect.Stop();
         HarmEffect.Stop();
         SpeedEffect.Stop();
+        ShieldEffect.Stop();
         audioSource = GetComponent<AudioSource>();
 
         // Fixed Robot Text
