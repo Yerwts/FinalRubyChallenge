@@ -9,7 +9,7 @@ public class RubyController : MonoBehaviour
     public float speed = 3.0f;
 
     public int maxHealth = 5;
-    public int maxSpeed = 10;
+    public int maxSpeed = 6;
 
     //Level
     public static int level = 1;
