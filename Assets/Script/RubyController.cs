@@ -121,7 +121,7 @@ public class RubyController : MonoBehaviour
         }
         if (isBoosting == true)
         {
-
+            speed = Mathf.Clamp(speed + 0.1f, 0, maxHealth);
             speed = speed + 0.001f;
         }
 
