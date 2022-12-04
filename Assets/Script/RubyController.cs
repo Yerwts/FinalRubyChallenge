@@ -235,6 +235,7 @@ public class RubyController : MonoBehaviour
 
         UIHealthBar.instance.SetValue(currentHealth / (float)maxHealth);
     }
+    // Cake Shield Function
     public void Cakeshield(int amount)
     {
         if (amount > 0)
