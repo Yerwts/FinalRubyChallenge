@@ -197,7 +197,7 @@ public class RubyController : MonoBehaviour
         rigidbody2d.MovePosition(position);
         if (isBoosting == true)
         {
-            speed = Mathf.Clamp(speed + 1, 0, maxSpeed);
+            speed = Mathf.Clamp(speed + 0.0001f, 0, maxSpeed);
 
         }
     }
