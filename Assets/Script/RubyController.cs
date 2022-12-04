@@ -122,11 +122,7 @@ public class RubyController : MonoBehaviour
             if (invincibleTimer < 0)
                 isInvincible = false;
         }
-        if (isBoosting == true)
-        {
-            speed = Mathf.Clamp(speed + 1, 0, maxSpeed);
 
-        }
 
         if (Input.GetKeyDown(KeyCode.C))
         {
@@ -199,6 +195,11 @@ public class RubyController : MonoBehaviour
         position.y = position.y + speed * vertical * Time.deltaTime;
 
         rigidbody2d.MovePosition(position);
+        if (isBoosting == true)
+        {
+            speed = Mathf.Clamp(speed + 1, 0, maxSpeed);
+
+        }
     }
 
     public void ChangeHealth(int amount)
