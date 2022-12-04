@@ -160,12 +160,12 @@ public class RubyController : MonoBehaviour
                 if (character2 != null)
 
                 {
-                    if  (cakeYes == true) 
+                    if (cakeYes == true)
                     {
                         isInvincible = true;
                         invincibleTimer = timeInvincible2;
                         ShieldEffect.Play();
-                           //shield = yes
+                        //shield = yes
                     }
                     else
                     {
