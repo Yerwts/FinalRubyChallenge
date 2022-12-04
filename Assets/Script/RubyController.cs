@@ -35,6 +35,7 @@ public class RubyController : MonoBehaviour
     public ParticleSystem ShieldEffect;
 
     public float timeInvincible = 2.0f;
+    public float timeInvincible = 15.0f;
     bool isInvincible;
     float invincibleTimer;
 
@@ -161,6 +162,7 @@ public class RubyController : MonoBehaviour
                     if (scoreFixed >= 4) //Cake=yes
                     {
                         isInvincible = true;
+                        invincibleTimer = timeInvincible2;
                         ShieldEffect.Play();
                            //shield = yes
                     }
