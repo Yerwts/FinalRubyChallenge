@@ -155,15 +155,16 @@ public class RubyController : MonoBehaviour
                 NonPlayerCharacter2 character2 = hit.collider.GetComponent<NonPlayerCharacter2>();
                 if (character2 != null)
 
-                    {
-                        if (scoreFixed >= 4)
-                        {
-                            SceneManager.LoadScene("Second Level");
-                            level = 2;
-                        }
-                else
                 {
-                    character2.DisplayDialog();
+                    if (scoreFixed >= 4)
+                    {
+                        SceneManager.LoadScene("Second Level");
+                        level = 2;
+                    }
+                    else
+                    {
+                        character2.DisplayDialog();
+                    }
                 }
             }
         }
