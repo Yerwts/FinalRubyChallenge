@@ -38,7 +38,7 @@ public class RubyController : MonoBehaviour
     public float timeInvincible2 = 15.0f;
     bool isInvincible;
     float invincibleTimer;
-    private int cake = 0;
+    bool cakeYes;
 
     Rigidbody2D rigidbody2d;
     float horizontal;
