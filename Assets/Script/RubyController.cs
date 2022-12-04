@@ -160,7 +160,7 @@ public class RubyController : MonoBehaviour
                 if (character2 != null)
 
                 {
-                    if (scoreFixed >= 4) //Cake=yes
+                    if  (cakeYes == true) 
                     {
                         isInvincible = true;
                         invincibleTimer = timeInvincible2;
