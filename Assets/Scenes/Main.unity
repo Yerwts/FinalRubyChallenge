@@ -39952,6 +39952,11 @@ PrefabInstance:
       objectReference: {fileID: 1740519436}
     - target: {fileID: 3932313099251433755, guid: 3d1371a087f096f48b1dbe115aac9f69,
         type: 3}
+      propertyPath: ShieldEffect
+      value: 
+      objectReference: {fileID: 1191360686}
+    - target: {fileID: 3932313099251433755, guid: 3d1371a087f096f48b1dbe115aac9f69,
+        type: 3}
       propertyPath: WinTextObject
       value: 
       objectReference: {fileID: 2112654234}
