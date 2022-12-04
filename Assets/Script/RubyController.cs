@@ -41,7 +41,6 @@ public class RubyController : MonoBehaviour
     bool isInvincible;
     float invincibleTimer;
 
-    public int Cakeshield = 0;
     bool cakeYes;
 
     Rigidbody2D rigidbody2d;
@@ -236,7 +235,13 @@ public class RubyController : MonoBehaviour
 
         UIHealthBar.instance.SetValue(currentHealth / (float)maxHealth);
     }
-
+    public void Cakeshield(int amount)
+    {
+        if (amount > 0)
+        {
+            bool cakeYes = true;
+        }
+    }
     // Ammo Function
     public void ChangeAmmo(int amount)
     {
@@ -314,11 +319,5 @@ public class RubyController : MonoBehaviour
             isBoosting = false;
         }
     }
-    public void Cakeshield(int amount)
-    {
-        if (amount > 0)
-        {
-            bool cakeYes = true;
-        }
-    }
+
 }
