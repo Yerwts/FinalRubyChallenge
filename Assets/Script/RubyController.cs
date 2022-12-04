@@ -124,6 +124,7 @@ public class RubyController : MonoBehaviour
         if (isBoosting == true)
         {
             speed = Mathf.Clamp(speed + 1, 0, maxSpeed);
+            maxSpeed = maxSpeed +1;
         }
 
         if (Input.GetKeyDown(KeyCode.C))
