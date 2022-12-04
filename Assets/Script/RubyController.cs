@@ -38,10 +38,8 @@ public class RubyController : MonoBehaviour
 
     public float timeInvincible = 2.0f;
     public float timeInvincible2 = 15.0f;
-    public int timeBoosting = 1;
     bool isInvincible;
     float invincibleTimer;
-    int isBoostingTimer;
 
     bool cakeYes;
 
@@ -127,7 +125,6 @@ public class RubyController : MonoBehaviour
         if (isBoosting == true)
         {
             speed = Mathf.Clamp(speed + 1, 0, maxSpeed);
-            isBoostingTimer = timeBoosting;
         }
 
         if (Input.GetKeyDown(KeyCode.C))
