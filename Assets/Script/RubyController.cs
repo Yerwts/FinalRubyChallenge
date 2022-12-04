@@ -160,7 +160,9 @@ public class RubyController : MonoBehaviour
                 {
                     if (scoreFixed >= 4) //Cake=yes
                     {
-                        //shield = yes
+                        isInvincible = true;
+                        ShieldEffect.Play();
+                           //shield = yes
                     }
                     else
                     {
