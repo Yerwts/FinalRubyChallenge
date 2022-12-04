@@ -3,7 +3,8 @@ guid: 70027feae200cd84a8650ad774da7a2f
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2
-  defaultReferences: []
+  defaultReferences:
+  - CakeClip: {fileID: 8300000, guid: c95b6a4ee691c0e44a072a2ef8616fee, type: 3}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 
