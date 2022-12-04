@@ -240,7 +240,7 @@ public class RubyController : MonoBehaviour
     {
         if (amount > 0)
         {
-            bool cakeYes = true;
+            cakeYes = true;
         }
     }
     // Ammo Function
