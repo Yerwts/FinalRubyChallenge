@@ -156,10 +156,9 @@ public class RubyController : MonoBehaviour
                 if (character2 != null)
 
                 {
-                    if (scoreFixed >= 4)
+                    if (scoreFixed >= 4) //Cake=yes
                     {
-                        SceneManager.LoadScene("Second Level");
-                        level = 2;
+                        //shield = yes
                     }
                     else
                     {
