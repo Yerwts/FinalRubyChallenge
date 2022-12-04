@@ -308,7 +308,7 @@ public class RubyController : MonoBehaviour
         {
             SpeedEffect.Play();
             isBoosting = true;
-            
+
             isBoosting = false;
         }
     }
