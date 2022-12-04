@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class NonPlayerCharacter : MonoBehaviour
 {
-    public AudioClip CroakClip;
     public float displayTime = 3.0f;
     public GameObject dialogBox;
     float timerDisplay;
