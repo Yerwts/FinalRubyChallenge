@@ -9,6 +9,8 @@ public class RubyController : MonoBehaviour
     public float speed = 3.0f;
 
     public int maxHealth = 5;
+    public int maxSpeed = 10;
+
     //Level
     public static int level = 1;
 
@@ -121,8 +123,7 @@ public class RubyController : MonoBehaviour
         }
         if (isBoosting == true)
         {
-            speed = Mathf.Clamp(speed + 0.1f, 0, maxHealth);
-            speed = speed + 0.001f;
+            speed = Mathf.Clamp(speed + 0.1f, 0, maxSpeed);
         }
 
         if (Input.GetKeyDown(KeyCode.C))
