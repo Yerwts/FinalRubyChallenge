@@ -9,7 +9,7 @@ public class RubyController : MonoBehaviour
     public float speed = 3.0f;
 
     public int maxHealth = 5;
-    public int maxSpeed = 10f;
+    public int maxSpeed = 6;
 
     //Level
     public static int level = 1;
@@ -40,7 +40,6 @@ public class RubyController : MonoBehaviour
     public float timeInvincible2 = 15.0f;
     bool isInvincible;
     float invincibleTimer;
-
     bool cakeYes;
 
     Rigidbody2D rigidbody2d;
@@ -125,6 +124,7 @@ public class RubyController : MonoBehaviour
         if (isBoosting == true)
         {
             speed = Mathf.Clamp(speed + 1, 0, maxSpeed);
+
         }
 
         if (Input.GetKeyDown(KeyCode.C))
