@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class AmmoCollectible : MonoBehaviour
 {
-    public AudioClip collectedClip;
+    public AudioClip GearClip;
     void OnTriggerEnter2D(Collider2D other)
     {
         RubyController controller = other.GetComponent<RubyController>();
@@ -17,7 +17,7 @@ public class AmmoCollectible : MonoBehaviour
                 controller.AmmoText(); // Changes Ammo UI
                 Destroy(gameObject);
 
-                controller.PlaySound(collectedClip);
+                controller.PlaySound(GearClip);
             }
         }
     }
