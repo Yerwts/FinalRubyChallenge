@@ -2592,6 +2592,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: CollectibleAmmo (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 8005770894626190679, guid: fc4c20945936e4b4daef11faa78d3042,
+        type: 3}
+      propertyPath: GearClip
+      value: 
+      objectReference: {fileID: 8300000, guid: 460e193fdceeab94daf7cc779ecead7d, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fc4c20945936e4b4daef11faa78d3042, type: 3}
 --- !u!1 &366551673
@@ -7792,6 +7797,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: CollectibleAmmo (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 8005770894626190679, guid: fc4c20945936e4b4daef11faa78d3042,
+        type: 3}
+      propertyPath: GearClip
+      value: 
+      objectReference: {fileID: 8300000, guid: 460e193fdceeab94daf7cc779ecead7d, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fc4c20945936e4b4daef11faa78d3042, type: 3}
 --- !u!1 &439284014
@@ -12717,7 +12727,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2899489b0d3a242478f25af590933d6f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  collectedClip: {fileID: 8300000, guid: af5f8b64e3f58f24c87ff8f789b04f6c, type: 3}
+  GearClip: {fileID: 0}
 --- !u!212 &541285480
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -33205,6 +33215,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: CollectibleAmmo (4)
       objectReference: {fileID: 0}
+    - target: {fileID: 8005770894626190679, guid: fc4c20945936e4b4daef11faa78d3042,
+        type: 3}
+      propertyPath: GearClip
+      value: 
+      objectReference: {fileID: 8300000, guid: 460e193fdceeab94daf7cc779ecead7d, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fc4c20945936e4b4daef11faa78d3042, type: 3}
 --- !u!1 &1150547053
@@ -39606,6 +39621,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: CollectibleAmmo (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 8005770894626190679, guid: fc4c20945936e4b4daef11faa78d3042,
+        type: 3}
+      propertyPath: GearClip
+      value: 
+      objectReference: {fileID: 8300000, guid: 460e193fdceeab94daf7cc779ecead7d, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fc4c20945936e4b4daef11faa78d3042, type: 3}
 --- !u!1001 &1723523297
