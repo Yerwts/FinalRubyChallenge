@@ -89,6 +89,7 @@ public class RubyController : MonoBehaviour
         // Win Text
         WinTextObject.SetActive(false);
         LoseTextObject.SetActive(false);
+        contTextObject.SetActive(false);
 
         gameOver = false;
 
